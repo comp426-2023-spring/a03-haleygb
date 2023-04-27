@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-import { rps } from "../lib/rpsls";
+import { rps } from "../lib/rpsls.js";
 import minimist from "minimist";
 
-args = minimist(process.argv.slice(2))
+const args = minimist(process.argv.slice(2))
 
 
 const help_text_RPS = 'Usage: node-rpsls [SHOT] \n\
@@ -33,5 +33,6 @@ if (args.r || args.rules) {
     console.log(rules_text_RPS)
 }
 
+console.log(rps(args._[0]))
 
 

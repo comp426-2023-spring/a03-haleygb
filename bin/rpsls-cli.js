@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 import minimist from "minimist";
-import { rpsls } from "../lib/rpsls";
+import { rpsls } from "../lib/rpsls.js";
 
-args = minimist(process.argv.slice(2))
+const args = minimist(process.argv.slice(2))
 
 const help_text_RPSLS = 'Usage: node-rpsls [SHOT] \n\
 Play the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)! \
@@ -34,7 +34,9 @@ if (args.h || args.help) {
     console.log(help_text_RPSLS)}
 
 if (args.r || args.rules) {
-
     console.log(rules_text_RPSLS)
 }
 
+
+
+console.log(rpsls(args._[0]))
