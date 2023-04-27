@@ -41,7 +41,7 @@ if (args.r || args.rules) {
 }
 
 
-export function RPS(playerShot = null){
+export function RPSLS(playerShot = null){
     const choices = [
         "Lizard",
         "Paper",
