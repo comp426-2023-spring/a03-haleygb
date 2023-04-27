@@ -37,7 +37,9 @@ if (args.r || args.rules) {
     console.log(rules_text_RPSLS)
 }
 
-
+try {
 let game_play = rpsls(args._[0])
 let format_game_play = JSON.stringify(game_play)
-console.log(format_game_play)
+console.log(format_game_play)}
+catch {console.log(help_text_RPSLS)
+console.log(rules_text_RPSLS)}
