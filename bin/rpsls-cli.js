@@ -31,10 +31,10 @@ const rules_text_RPSLS = 'Rules for the Lizard-Spock Expansion of Rock Paper Sci
 - Rock CRUSHES Scissors'
 
 if (args.h || args.help) {
-    console.log(help_text_RPS)}
+    console.log(help_text_RPSLS)}
 
 if (args.r || args.rules) {
 
-    console.log(rules_text_RPS)
+    console.log(rules_text_RPSLS)
 }
 
