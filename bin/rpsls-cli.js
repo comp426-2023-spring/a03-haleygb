@@ -2,6 +2,7 @@
 
 import minimist from "minimist";
 
+
 args = minimist(process.argv.slice(2))
 
 const help_text = 'Usage: node-rpsls [SHOT] \n\
@@ -39,3 +40,24 @@ if (args.r || args.rules) {
     console.log(rules_text)
 }
 
+
+export function RPS(playerShot = null){
+    const choices = [
+        "Lizard",
+        "Paper",
+        "Rock",
+        "Scissor",
+        "Spock"
+    ]
+
+    const choice_rules = {
+        Lizard: ['Spock', 'Paper'],
+        Paper: ['Rock', 'Spock'],
+        Rock: ['Lizard', 'Scissor'],
+        Scissor: ['Paper', 'Lizard'],
+        Spock: ['Scissor', 'Rock']
+    }
+
+    
+
+}

@@ -32,3 +32,17 @@ if (args.h || args.help) {
 if (args.r || args.rules) {
     console.log(rules_text)
 }
+
+export function RPS(playerShot = null){
+    const choices = [
+        "Rock",
+        "Scissor",
+        "Spock"
+    ]
+
+    const choice_rules = {
+        Paper: ['Rock'],
+        Rock: ['Scissor'],
+        Scissor: ['Paper'],
+    }
+}
