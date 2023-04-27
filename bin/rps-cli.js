@@ -33,6 +33,8 @@ if (args.r || args.rules) {
     console.log(rules_text_RPS)
 }
 
-console.log(rps(args._[0]))
+let game_play = rps(args._[0])
+let format_game_play = JSON.stringify(game_play)
+console.log(format_game_play)
 
 
