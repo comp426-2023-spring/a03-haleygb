@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 import minimist from "minimist";
-
+import { rpsls } from "../lib/rpsls";
 
 args = minimist(process.argv.slice(2))
 
-const help_text = 'Usage: node-rpsls [SHOT] \n\
+const help_text_RPSLS = 'Usage: node-rpsls [SHOT] \n\
 Play the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)! \
 \n \
   -h, --help        display this help message and exit \
@@ -17,7 +17,7 @@ Examples: \
   node-rpls rock   Return JSON with results for RPSLS played against a simulated opponent. \
                     e.g {"player":"rock","opponent":"Spock","result":"lose"}'
 
-const rules_text = 'Rules for the Lizard-Spock Expansion of Rock Paper Scissors: \
+const rules_text_RPSLS = 'Rules for the Lizard-Spock Expansion of Rock Paper Scissors: \
 \n \
 - Scissors CUTS Paper \
 - Paper COVERS Rock \
@@ -30,37 +30,11 @@ const rules_text = 'Rules for the Lizard-Spock Expansion of Rock Paper Scissors:
 - Spock VAPORIZES Rock \
 - Rock CRUSHES Scissors'
 
-
-
 if (args.h || args.help) {
-    console.log(help_text)
-}
+    console.log(help_text_RPS)}
 
 if (args.r || args.rules) {
-    console.log(rules_text)
+
+    console.log(rules_text_RPS)
 }
 
-
-export function RPSLS(playerShot = null){
-    const choices = [
-        "Lizard",
-        "Paper",
-        "Rock",
-        "Scissor",
-        "Spock"
-    ]
-
-    const choice_rules = {
-        Lizard: ['Spock', 'Paper'],
-        Paper: ['Rock', 'Spock'],
-        Rock: ['Lizard', 'Scissor'],
-        Scissor: ['Paper', 'Lizard'],
-        Spock: ['Scissor', 'Rock']
-    }
-
-    
-    computer_shot = choices[Math.floor((Math.random()*choices.length))]
-
-
-
-}
