@@ -59,5 +59,8 @@ export function RPSLS(playerShot = null){
     }
 
     
+    computer_shot = choices[Math.floor((Math.random()*choices.length))]
+
+
 
 }
