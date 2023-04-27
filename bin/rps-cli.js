@@ -6,7 +6,7 @@ import minimist from "minimist";
 args = minimist(process.argv.slice(2))
 
 const help_text = 'Usage: node-rpsls [SHOT] \n\
-Play the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)! \
+Play Rock Paper Scissors (RPSLS)! \
 \n \
   -h, --help        display this help message and exit \
   -r, --rules       display the rules and exit \
